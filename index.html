@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AeroStore — Experience the future of tech, reimagined with nature-inspired design.">
+    <title>AeroStore — Fresh. Glossy. Beautiful.</title>
+
+    <!-- Google Fonts: Rounded, friendly sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+    <!-- ========== HERO (includes Nav) ========== -->
+    <section id="hero" class="hero-section">
+        <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span class="brand-icon">🌿</span> Aero<span class="brand-highlight">Store</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto gap-lg-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#hero" role="button"
+                                data-bs-toggle="dropdown">Home</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#hero"><i class="bi bi-house me-2"></i>Welcome</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#hero"><i class="bi bi-stars me-2"></i>What's New</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#products" role="button"
+                                data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#products"><i
+                                            class="bi bi-laptop me-2"></i>Devices</a></li>
+                                <li><a class="dropdown-item" href="#products"><i
+                                            class="bi bi-headphones me-2"></i>Audio</a></li>
+                                <li><a class="dropdown-item" href="#products"><i
+                                            class="bi bi-smartwatch me-2"></i>Wearables</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#features" role="button"
+                                data-bs-toggle="dropdown">Why Aero</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#features"><i
+                                            class="bi bi-droplet me-2"></i>Design</a></li>
+                                <li><a class="dropdown-item" href="#features"><i
+                                            class="bi bi-tree me-2"></i>Eco-Friendly</a></li>
+                                <li><a class="dropdown-item" href="#features"><i
+                                            class="bi bi-lightning me-2"></i>Performance</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reviews">Reviews</a>
+                        </li>
+                    </ul>
+                    <a href="#products" class="btn btn-aero ms-lg-3 d-none d-lg-inline-block">Shop Now</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- YouTube Background Video -->
+        <div class="hero-video-bg">
+            <iframe
+                src="https://www.youtube.com/embed/GGaGODIG1kc?autoplay=1&mute=1&loop=1&playlist=GGaGODIG1kc&controls=0&showinfo=0&modestbranding=1&rel=0&disablekb=1&iv_load_policy=3&playsinline=1"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Background Video"></iframe>
+            <div class="hero-video-overlay"></div>
+        </div>
+
+        <!-- Decorative bubbles -->
+        <div class="hero-bubbles" aria-hidden="true">
+            <div class="bubble b1"></div>
+            <div class="bubble b2"></div>
+            <div class="bubble b3"></div>
+            <div class="bubble b4"></div>
+            <div class="bubble b5"></div>
+            <div class="bubble b6"></div>
+            <div class="bubble b7"></div>
+        </div>
+
+        <!-- Glossy light streaks -->
+        <div class="hero-light-streak s1"></div>
+        <div class="hero-light-streak s2"></div>
+
+        <div class="hero-content d-flex align-items-center">
+            <div class="container position-relative">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-badge">
+                            <i class="bi bi-droplet-fill me-1"></i> Fresh 2026 Collection
+                        </div>
+                        <h1 class="hero-title">
+                            Technology<br>
+                            Inspired by <span class="text-sky">Nature</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Discover products crafted with glossy elegance and eco-conscious design.
+                            Where crystal-clear meets cutting-edge.
+                        </p>
+                        <div class="hero-cta d-flex gap-3 flex-wrap">
+                            <a href="#products" class="btn btn-aero btn-lg px-4">
+                                <i class="bi bi-bag me-2"></i>Browse Products
+                            </a>
+                            <a href="#features" class="btn btn-glass btn-lg px-4">
+                                <i class="bi bi-play-circle me-2"></i>Learn More
+                            </a>
+                        </div>
+                        <div class="hero-trust mt-4">
+                            <div class="trust-avatars">
+                                <span class="trust-dot" style="background:#7EC8E3"></span>
+                                <span class="trust-dot" style="background:#A8E06C"></span>
+                                <span class="trust-dot" style="background:#FFD166"></span>
+                                <span class="trust-dot" style="background:#F4A7BB"></span>
+                            </div>
+                            <span class="trust-text">Loved by <strong>50,000+</strong> customers worldwide</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                        <div class="hero-product-showcase">
+                            <div class="showcase-card">
+                                <div class="showcase-screen">
+                                    <div class="screen-gradient"></div>
+                                    <!-- CHANGE THE IMAGE URL HERE -->
+                                    <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*_zqJUXJaDneHRrXeXtR5vQ.webp"
+                                        alt="App Screenshot" class="showcase-img"
+                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                                </div>
+                                <div class="showcase-base"></div>
+                                <div class="showcase-reflection"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,40 C360,120 720,0 1080,80 C1260,100 1380,60 1440,40 L1440,120 L0,120 Z" fill="#f0f9f0" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCTS ========== -->
+    <section id="products" class="section products-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><i class="bi bi-droplet-half me-1"></i> Our Products</span>
+                <h2 class="section-title">The Aero <span class="text-sky">Collection</span></h2>
+                <div class="title-bar mx-auto"></div>
+                <p class="section-desc mt-3">Premium tech wrapped in nature-inspired, glossy design.</p>
+            </div>
+            <div class="row mt-5 g-4">
+                <!-- Product 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <div class="product-visual">
+                                <img src="https://preview.redd.it/frutiger-aero-laptop-sony-vaio-v0-dbum9qeupr4d1.jpg?width=1024&format=pjpg&auto=webp&s=269a0ac91ff97c99f1bbf50f383845fae23051c3"
+                                        alt="App Screenshot" class="showcase-img"
+                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                            </div>
+                            <div class="product-shine"></div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Devices</span>
+                            <h5 class="product-name">AeroBook Pro</h5>
+                            <p class="product-desc">Ultra-thin laptop with aqua-gradient shell, 16" crystal display, and
+                                all-day battery.</p>
+                            <div class="product-footer">
+                                <span class="product-price">$1,299</span>
+                                <a href="#" class="btn btn-aero-sm"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-badge hot">Hot</div>
+                        <div class="product-image">
+                            <div class="product-visual">
+                                <img src="https://www.stellacases.com/cdn/shop/files/AirPods_Cases_13_1a539ff9-7375-44b0-b84e-9967189c2a12.png?v=1727736409"
+                                        alt="App Screenshot" class="showcase-img"
+                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                            </div>
+                            <div class="product-shine"></div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Audio</span>
+                            <h5 class="product-name">AeroPods Flow</h5>
+                            <p class="product-desc">Translucent wireless earbuds with water-drop design and immersive
+                                spatial audio.</p>
+                            <div class="product-footer">
+                                <span class="product-price">$199</span>
+                                <a href="#" class="btn btn-aero-sm"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="product-visual">
+                                <img src="https://skeuoss.net/cdn/shop/files/frutiger-aero-light-projector-1_3fba0e03-496c-41c6-aa6a-fce31d3f2b51.webp?v=1715685571&width=713"
+                                        alt="App Screenshot" class="showcase-img"
+                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                            </div>
+                            <div class="product-shine"></div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">LED Projector</span>
+                            <h5 class="product-name">Frutiger Aero RGB Bedroom Nightlight</h5>
+                            <p class="product-desc">Experience a mesmerizing light show right in your bedroom with the Frutiger Aurora LED Projector. </p>
+                            <div class="product-footer">
+                                <span class="product-price">$349</span>
+                                <a href="#" class="btn btn-aero-sm"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="product-visual speaker">
+                                <img src="https://cdn.shopify.com/s/files/1/0560/2138/5274/files/aqua-mouse-clear-blue-main-bg.webp"
+                                        alt="App Screenshot" class="showcase-img"
+                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                            </div>
+                            <div class="product-shine"></div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Mouse</span>
+                            <h5 class="product-name">Skeuoss Frutiger Aero Aqua Liquid Mouse</h5>
+                            <p class="product-desc">Experience the smooth, fluid motion of the Skeuoss Frutiger Aero Aqua Liquid Mouse. This innovative mouse combines the classic Frutiger Aero aesthetic.</p>
+                            <div class="product-footer">
+                                <span class="product-price">$249</span>
+                                <a href="#" class="btn btn-aero-sm"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <div class="product-visual tablet">
+                                <img src="https://cdn.shopify.com/s/files/1/0560/2138/5274/files/2_3-frutiger-aero-fish-lamp-background.webp"
+                                        alt="App Screenshot" class="showcase-img"
+                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                            </div>
+                            <div class="product-shine"></div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Lamp</span>
+                            <h5 class="product-name">Tropical Fish Tank Lamps Aquarium</h5>
+                            <p class="product-desc">Introducing the Frutiger Aero Lamp, a stunning addition to any room seeking a touch of aquatic charm.</p>
+                            <div class="product-footer">
+                                <span class="product-price">$899</span>
+                                <a href="#" class="btn btn-aero-sm"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card">
+                        <div class="product-badge hot">Hot</div>
+                        <div class="product-image">
+                            <div class="product-visual phone">
+                               <img src="https://skeuoss.net/cdn/shop/files/frutiger-aero-bracelet-clouds-bubbles-smileys-1_8799afc8-cf50-4184-bb7c-e22a7278dafb.webp?v=1715685543&width=713"
+                                        alt="App Screenshot" class="showcase-img"
+                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                            </div>
+                            <div class="product-shine"></div>
+                        </div>
+                        <div class="product-body">
+                            <span class="product-category">Bracelet</span>
+                            <h5 class="product-name">Frutiger Aero Bracelet</h5>
+                            <p class="product-desc">Introducing a delightful addition to any jewelry collection, our Frutiger Aero Bracelet is a playful accessory that captures the essence of childhood wonder.</p>
+                            <div class="product-footer">
+                                <span class="product-price">$999</span>
+                                <a href="#" class="btn btn-aero-sm"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY AERO (Features) ========== -->
+    <section id="features" class="section features-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><i class="bi bi-tree me-1"></i> Why AeroStore</span>
+                <h2 class="section-title">Design Meets <span class="text-sky">Nature</span></h2>
+                <div class="title-bar mx-auto"></div>
+            </div>
+            <div class="row mt-5 g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon"><i class="bi bi-droplet-fill"></i></div>
+                        <h6 class="feature-title">Glossy Finish</h6>
+                        <p class="feature-desc">Every product features water-polished, reflective surfaces inspired by
+                            morning dew.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon"><i class="bi bi-recycle"></i></div>
+                        <h6 class="feature-title">Eco-Friendly</h6>
+                        <p class="feature-desc">Made from recycled materials with carbon-neutral manufacturing and
+                            packaging.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon"><i class="bi bi-lightning-fill"></i></div>
+                        <h6 class="feature-title">Blazing Fast</h6>
+                        <p class="feature-desc">Cutting-edge processors and optimised software for a silky-smooth
+                            experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+                        <h6 class="feature-title">3-Year Warranty</h6>
+                        <p class="feature-desc">Full coverage with free repairs and replacements. We stand behind our
+                            craft.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== REVIEWS ========== -->
+    <section id="reviews" class="section reviews-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><i class="bi bi-chat-heart me-1"></i> Happy Customers</span>
+                <h2 class="section-title">What People <span class="text-sky">Say</span></h2>
+                <div class="title-bar mx-auto"></div>
+            </div>
+            <div class="row mt-5 g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"The AeroBook Pro is stunning. It literally looks like it was designed by
+                            nature. The glossy finish catches light beautifully."</p>
+                        <div class="review-author">
+                            <div class="author-bubble"><i class="bi bi-person-fill"></i></div>
+                            <div>
+                                <div class="author-name">Alex R.</div>
+                                <div class="author-tag">AeroBook Pro Owner</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"AeroPods Flow feel like wearing water droplets in your ears — incredibly
+                            light and the sound quality is out of this world."</p>
+                        <div class="review-author">
+                            <div class="author-bubble"><i class="bi bi-person-fill"></i></div>
+                            <div>
+                                <div class="author-name">Mia T.</div>
+                                <div class="author-tag">Music Enthusiast</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"I love that everything is eco-friendly without sacrificing beauty. This
+                            is what tech should have always looked like."</p>
+                        <div class="review-author">
+                            <div class="author-bubble"><i class="bi bi-person-fill"></i></div>
+                            <div>
+                                <div class="author-name">Jordan K.</div>
+                                <div class="author-tag">Environmental Designer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA / NEWSLETTER ========== -->
+    <section id="cta" class="section cta-section">
+        <div class="container">
+            <div class="cta-box text-center">
+                <div class="cta-bubbles" aria-hidden="true">
+                    <div class="cb cb1"></div>
+                    <div class="cb cb2"></div>
+                    <div class="cb cb3"></div>
+                </div>
+                <span class="section-tag"><i class="bi bi-envelope-heart me-1"></i> Stay Fresh</span>
+                <h2 class="section-title mt-2">Get <span class="text-sky">Early Access</span></h2>
+                <p class="cta-desc mt-2">Be the first to know about new Aero products, exclusive drops, and special
+                    offers.</p>
+                <form class="cta-form mt-4 d-flex gap-2 justify-content-center flex-wrap">
+                    <input type="email" class="form-control cta-input" placeholder="Enter your email..." required>
+                    <button type="submit" class="btn btn-aero btn-lg">
+                        <i class="bi bi-send me-1"></i>Subscribe
+                    </button>
+                </form>
+                <p class="cta-note mt-2">Free forever. No spam. Unsubscribe anytime 🌱</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-section">
+        <div class="container text-center">
+            <a class="footer-brand" href="#">
+                <span class="brand-icon">🌿</span> Aero<span class="brand-highlight">Store</span>
+            </a>
+            <div class="footer-links mt-3">
+                <a href="#hero">Home</a>
+                <a href="#products">Products</a>
+                <a href="#features">Why Aero</a>
+                <a href="#reviews">Reviews</a>
+            </div>
+            <div class="footer-socials mt-3">
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            </div>
+            <p class="footer-copy mt-3">&copy; 2026 AeroStore. Crafted with 🌿 and pixels.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#hero" class="btn-back-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 400);
+        });
+
+        // Smooth scroll + collapse mobile menu
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', e => {
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    const navCollapse = document.getElementById('navMenu');
+                    if (navCollapse.classList.contains('show')) {
+                        new bootstrap.Collapse(navCollapse).hide();
+                    }
+                }
+            });
+        });
+
+        // Scroll reveal
+        const revealEls = document.querySelectorAll('.product-card, .feature-card, .review-card, .cta-box');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('revealed'), i * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealEls.forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
