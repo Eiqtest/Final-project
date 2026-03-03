@@ -24,6 +24,20 @@
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
 
+    <!-- Cursor Trail Canvas (site-wide) -->
+    <canvas id="trailCanvas" aria-hidden="true"></canvas>
+
+    <!-- ========== PAGE LOADER ========== -->
+    <div id="pageLoader" aria-hidden="true">
+        <div class="loader-logo">🌿 Aero<span>Store</span></div>
+        <div class="loader-bubbles">
+            <div class="loader-bubble"></div>
+            <div class="loader-bubble"></div>
+            <div class="loader-bubble"></div>
+        </div>
+        <div class="loader-text">Loading Experience…</div>
+    </div>
+
     <!-- ========== HERO (includes Nav) ========== -->
     <section id="hero" class="hero-section">
         <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
@@ -73,6 +87,18 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#reviews">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team">👥 Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">🖼️ Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#minigame">🎮 Aero Zone</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#location">📍 Find Us</a>
                         </li>
                     </ul>
                     <a href="#products" class="btn btn-aero ms-lg-3 d-none d-lg-inline-block">Shop Now</a>
@@ -135,6 +161,10 @@
                             </div>
                             <span class="trust-text">Loved by <strong>50,000+</strong> customers worldwide</span>
                         </div>
+                        <!-- Scroll hint -->
+                        <a href="#products" class="scroll-hint d-inline-flex">
+                            <i class="bi bi-chevron-down"></i> Scroll to explore
+                        </a>
                     </div>
                     <div class="col-lg-6 text-center mt-5 mt-lg-0">
                         <div class="hero-product-showcase">
@@ -179,8 +209,8 @@
                         <div class="product-image">
                             <div class="product-visual">
                                 <img src="https://preview.redd.it/frutiger-aero-laptop-sony-vaio-v0-dbum9qeupr4d1.jpg?width=1024&format=pjpg&auto=webp&s=269a0ac91ff97c99f1bbf50f383845fae23051c3"
-                                        alt="App Screenshot" class="showcase-img"
-                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                                    alt="App Screenshot" class="showcase-img"
+                                    style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
                             </div>
                             <div class="product-shine"></div>
                         </div>
@@ -203,8 +233,8 @@
                         <div class="product-image">
                             <div class="product-visual">
                                 <img src="https://www.stellacases.com/cdn/shop/files/AirPods_Cases_13_1a539ff9-7375-44b0-b84e-9967189c2a12.png?v=1727736409"
-                                        alt="App Screenshot" class="showcase-img"
-                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                                    alt="App Screenshot" class="showcase-img"
+                                    style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
                             </div>
                             <div class="product-shine"></div>
                         </div>
@@ -226,15 +256,16 @@
                         <div class="product-image">
                             <div class="product-visual">
                                 <img src="https://skeuoss.net/cdn/shop/files/frutiger-aero-light-projector-1_3fba0e03-496c-41c6-aa6a-fce31d3f2b51.webp?v=1715685571&width=713"
-                                        alt="App Screenshot" class="showcase-img"
-                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                                    alt="App Screenshot" class="showcase-img"
+                                    style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
                             </div>
                             <div class="product-shine"></div>
                         </div>
                         <div class="product-body">
                             <span class="product-category">LED Projector</span>
                             <h5 class="product-name">Frutiger Aero RGB Bedroom Nightlight</h5>
-                            <p class="product-desc">Experience a mesmerizing light show right in your bedroom with the Frutiger Aurora LED Projector. </p>
+                            <p class="product-desc">Experience a mesmerizing light show right in your bedroom with the
+                                Frutiger Aurora LED Projector. </p>
                             <div class="product-footer">
                                 <span class="product-price">$349</span>
                                 <a href="#" class="btn btn-aero-sm"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
@@ -248,15 +279,17 @@
                         <div class="product-image">
                             <div class="product-visual speaker">
                                 <img src="https://cdn.shopify.com/s/files/1/0560/2138/5274/files/aqua-mouse-clear-blue-main-bg.webp"
-                                        alt="App Screenshot" class="showcase-img"
-                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                                    alt="App Screenshot" class="showcase-img"
+                                    style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
                             </div>
                             <div class="product-shine"></div>
                         </div>
                         <div class="product-body">
                             <span class="product-category">Mouse</span>
                             <h5 class="product-name">Skeuoss Frutiger Aero Aqua Liquid Mouse</h5>
-                            <p class="product-desc">Experience the smooth, fluid motion of the Skeuoss Frutiger Aero Aqua Liquid Mouse. This innovative mouse combines the classic Frutiger Aero aesthetic.</p>
+                            <p class="product-desc">Experience the smooth, fluid motion of the Skeuoss Frutiger Aero
+                                Aqua Liquid Mouse. This innovative mouse combines the classic Frutiger Aero aesthetic.
+                            </p>
                             <div class="product-footer">
                                 <span class="product-price">$249</span>
                                 <a href="#" class="btn btn-aero-sm"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
@@ -271,15 +304,16 @@
                         <div class="product-image">
                             <div class="product-visual tablet">
                                 <img src="https://cdn.shopify.com/s/files/1/0560/2138/5274/files/2_3-frutiger-aero-fish-lamp-background.webp"
-                                        alt="App Screenshot" class="showcase-img"
-                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                                    alt="App Screenshot" class="showcase-img"
+                                    style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
                             </div>
                             <div class="product-shine"></div>
                         </div>
                         <div class="product-body">
                             <span class="product-category">Lamp</span>
                             <h5 class="product-name">Tropical Fish Tank Lamps Aquarium</h5>
-                            <p class="product-desc">Introducing the Frutiger Aero Lamp, a stunning addition to any room seeking a touch of aquatic charm.</p>
+                            <p class="product-desc">Introducing the Frutiger Aero Lamp, a stunning addition to any room
+                                seeking a touch of aquatic charm.</p>
                             <div class="product-footer">
                                 <span class="product-price">$899</span>
                                 <a href="#" class="btn btn-aero-sm"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
@@ -293,16 +327,18 @@
                         <div class="product-badge hot">Hot</div>
                         <div class="product-image">
                             <div class="product-visual phone">
-                               <img src="https://skeuoss.net/cdn/shop/files/frutiger-aero-bracelet-clouds-bubbles-smileys-1_8799afc8-cf50-4184-bb7c-e22a7278dafb.webp?v=1715685543&width=713"
-                                        alt="App Screenshot" class="showcase-img"
-                                        style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+                                <img src="https://skeuoss.net/cdn/shop/files/frutiger-aero-bracelet-clouds-bubbles-smileys-1_8799afc8-cf50-4184-bb7c-e22a7278dafb.webp?v=1715685543&width=713"
+                                    alt="App Screenshot" class="showcase-img"
+                                    style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
                             </div>
                             <div class="product-shine"></div>
                         </div>
                         <div class="product-body">
                             <span class="product-category">Bracelet</span>
                             <h5 class="product-name">Frutiger Aero Bracelet</h5>
-                            <p class="product-desc">Introducing a delightful addition to any jewelry collection, our Frutiger Aero Bracelet is a playful accessory that captures the essence of childhood wonder.</p>
+                            <p class="product-desc">Introducing a delightful addition to any jewelry collection, our
+                                Frutiger Aero Bracelet is a playful accessory that captures the essence of childhood
+                                wonder.</p>
                             <div class="product-footer">
                                 <span class="product-price">$999</span>
                                 <a href="#" class="btn btn-aero-sm"><i class="bi bi-bag-plus me-1"></i>Add to Cart</a>
@@ -414,6 +450,261 @@
         </div>
     </section>
 
+    <!-- ========== TEAM ========== -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><i class="bi bi-people me-1"></i> Our People</span>
+                <h2 class="section-title">Meet the <span class="text-sky">Team</span></h2>
+                <div class="title-bar mx-auto"></div>
+                <p class="section-desc mt-3">The dreamers and makers behind every glossy pixel of AeroStore.</p>
+            </div>
+            <div class="row mt-5 g-4">
+                <!-- Member 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-avatar avatar-green">🌿</div>
+                        <div class="team-name">Aria Nova</div>
+                        <div class="team-role-pill">Founder & CEO</div>
+                        <p class="team-bio">Visionary behind the Aero aesthetic revival. Passionate about blending
+                            technology and nature.</p>
+                        <div class="team-socials">
+                            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-avatar avatar-blue">💧</div>
+                        <div class="team-name">Kai Frost</div>
+                        <div class="team-role-pill">Lead Designer</div>
+                        <p class="team-bio">Crafts every glossy surface, gradient, and glass effect with meticulous
+                            detail and love.</p>
+                        <div class="team-socials">
+                            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" aria-label="Dribbble"><i class="bi bi-dribbble"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-avatar avatar-aqua">⚡</div>
+                        <div class="team-name">Mia Chen</div>
+                        <div class="team-role-pill">Head of Engineering</div>
+                        <p class="team-bio">Powers the tech behind every smooth animation, canvas minigame, and
+                            lightning-fast page.</p>
+                        <div class="team-socials">
+                            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-avatar avatar-pink">🌸</div>
+                        <div class="team-name">Leo Park</div>
+                        <div class="team-role-pill">Community Manager</div>
+                        <p class="team-bio">Keeps the AeroStore community thriving with joy, support, and a sprinkle of
+                            nostalgia.</p>
+                        <div class="team-socials">
+                            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><i class="bi bi-images me-1"></i> Aero Vibes</span>
+                <h2 class="section-title">The Frutiger <span class="text-sky">Gallery</span></h2>
+                <div class="title-bar mx-auto"></div>
+                <p class="section-desc mt-3">A curated collection of Frutiger Aero aesthetics gathered from across the
+                    internet.</p>
+            </div>
+            <div class="gallery-grid mt-5">
+                <div class="gallery-item" data-index="0">
+                    <img src="https://preview.redd.it/over-50-frutiger-aero-wallpapers-2008ify-your-pc-v0-lqk4etc2nz9b1.jpg?width=1080&crop=smart&auto=webp&s=c6609bbb5f483b73fed6fe85b2e6e6893c755fe6"
+                        alt="Frutiger Aero wallpaper featuring glossy orbs and nature scenery" loading="lazy">
+                    <div class="gallery-caption"><span>🌿 Glossy Orbs & Nature Vibes</span></div>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <img src="https://preview.redd.it/over-50-frutiger-aero-wallpapers-2008ify-your-pc-v0-lqp9wuc2nz9b1.jpg?width=1080&crop=smart&auto=webp&s=901c709003edbe146e539581a5447778149a968c"
+                        alt="Frutiger Aero wallpaper with sky gradient and light reflections" loading="lazy">
+                    <div class="gallery-caption"><span>☁️ Crystal Sky Gradient</span></div>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <img src="https://preview.redd.it/over-50-frutiger-aero-wallpapers-2008ify-your-pc-v0-sokqnpc2nz9b1.jpg?width=1080&crop=smart&auto=webp&s=dd13a6151d7c431b372d6b54a0ca807ca574f32a"
+                        alt="Frutiger Aero wallpaper with aqua tones and translucent elements" loading="lazy">
+                    <div class="gallery-caption"><span>� Aqua Translucent World</span></div>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <img src="https://preview.redd.it/over-50-frutiger-aero-wallpapers-2008ify-your-pc-v0-q7ms1sd2nz9b1.jpg?width=1080&crop=smart&auto=webp&s=1f89402a1fa851610d70d609bf38432b4f2dee0e"
+                        alt="Frutiger Aero wallpaper with green meadows and glowing light" loading="lazy">
+                    <div class="gallery-caption"><span>🌱 Meadow Glow Aero</span></div>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <img src="https://preview.redd.it/this-frutiger-aero-image-is-my-true-work-of-art-v0-lq41zlo80zhe1.jpeg?width=1080&crop=smart&auto=webp&s=84faf16266d9bf557f58cc08643d8d020f3782da"
+                        alt="Fan-made Frutiger Aero artwork with HD glossy bubbles and nature" loading="lazy">
+                    <div class="gallery-caption"><span>🎨 Fan Art — True Aero Masterpiece</span></div>
+                </div>
+                <div class="gallery-item" data-index="5">
+                    <img src="https://wallpapers.com/images/high/digital-communication-ocean-waves-seagulls-8i8gvhuf00czqk42.webp"
+                        alt="Digital ocean waves and seagulls in a serene Aero-style scene" loading="lazy">
+                    <div class="gallery-caption"><span>🌊 Ocean Waves & Seagulls</span></div>
+                </div>
+                <div class="gallery-item" data-index="6">
+                    <img src="https://wallpapers.com/images/high/the-magical-tablet-4xx45wjb0qgv3sw9.webp"
+                        alt="Magical glowing tablet with Aero-inspired soft light effects" loading="lazy">
+                    <div class="gallery-caption"><span>✨ The Magical Tablet</span></div>
+                </div>
+                <div class="gallery-item" data-index="7">
+                    <img src="https://preview.redd.it/frutiger-aero-aesthetic-in-genshin-impact-v0-gxnb9zz6th2f1.png?width=1080&crop=smart&auto=webp&s=7899132ba6649b3dc5d007d01593d070ad75412e"
+                        alt="Frutiger Aero aesthetic recreated inside Genshin Impact game world" loading="lazy">
+                    <div class="gallery-caption"><span>🎮 Aero Aesthetic in Genshin Impact</span></div>
+                </div>
+                <div class="gallery-item" data-index="8">
+                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*zDEyCTmtLmshHyXTw0As4w.png"
+                        alt="Frutiger Aero UI design overview showing the era's signature style" loading="lazy">
+                    <div class="gallery-caption"><span>🖥️ The Aero UI Era Defined</span></div>
+                </div>
+                <div class="gallery-item" data-index="9">
+                    <img src="https://i.pinimg.com/736x/50/15/b4/5015b46da46e226d0232d2acf49a3276.jpg"
+                        alt="Frutiger Aero aesthetic collage with shiny icons and nature elements" loading="lazy">
+                    <div class="gallery-caption"><span>� Shiny Icons & Nature Collage</span></div>
+                </div>
+                <div class="gallery-item" data-index="10">
+                    <img src="https://preview.redd.it/my-frutiger-aero-dream-house-v0-qpuqadxaqu3f1.jpeg?auto=webp&s=a447e484f9d1ab7c97f1656a0235fb43f70deae4"
+                        alt="Fan concept of a Frutiger Aero dream house with glassy architecture" loading="lazy">
+                    <div class="gallery-caption"><span>� Frutiger Aero Dream House</span></div>
+                </div>
+                <div class="gallery-item" data-index="11">
+                    <img src="https://preview.redd.it/my-last-dream-i-made-this-on-blender-v0-csta326ta6ec1.jpeg?auto=webp&s=7012e3141a09a599f58c9aa50d20ac7ec213a711"
+                        alt="3D Blender render of a surreal Frutiger Aero dream scene" loading="lazy">
+                    <div class="gallery-caption"><span>💻 3D Blender Aero Dream Render</span></div>
+                </div>
+                <div class="gallery-item" data-index="12">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3797460/1e361f6ed83dc2b821eabb63d04bf3c0d7b06fe5/ss_1e361f6ed83dc2b821eabb63d04bf3c0d7b06fe5.1920x1080.jpg?t=1765820388"
+                        alt="Frutiger Aero inspired indie game screenshot with glossy environment" loading="lazy">
+                    <div class="gallery-caption"><span>🕹️ Aero-Inspired Indie Game</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+            <div class="lightbox-inner">
+                <button class="lightbox-close" id="lbClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+                <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Previous"><i
+                        class="bi bi-chevron-left"></i></button>
+                <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Next"><i
+                        class="bi bi-chevron-right"></i></button>
+                <img src="" alt="" id="lbImg">
+                <div class="lightbox-caption" id="lbCaption"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== AERO ZONE (Minigame) ========== -->
+    <section id="minigame" class="section minigame-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><i class="bi bi-joystick me-1"></i> Take a Break</span>
+                <h2 class="section-title">Aero <span class="text-sky">Zone 🎮</span></h2>
+                <div class="title-bar mx-auto"></div>
+                <p class="section-desc mt-3">Pop the glossy bubbles before they float away! How high can you score?</p>
+            </div>
+
+            <!-- Game UI bar -->
+            <div class="game-ui mt-5">
+                <!-- Score -->
+                <div class="game-stat">
+                    <div>
+                        <div class="game-stat-label">Score</div>
+                        <div class="game-stat-value" id="gameScore">0</div>
+                    </div>
+                </div>
+                <!-- Hearts -->
+                <div class="game-stat">
+                    <div>
+                        <div class="game-stat-label">Lives</div>
+                        <div class="game-hearts" id="gameHearts">❤️❤️❤️</div>
+                    </div>
+                </div>
+                <!-- Combo -->
+                <div class="game-stat">
+                    <div>
+                        <div class="game-stat-label">Combo</div>
+                        <div class="game-stat-value" id="gameCombo">x1</div>
+                    </div>
+                </div>
+                <!-- Timer ring -->
+                <div class="game-stat">
+                    <div class="game-timer-ring">
+                        <svg viewBox="0 0 44 44">
+                            <defs>
+                                <linearGradient id="timerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#4FC3F7" />
+                                    <stop offset="100%" style="stop-color:#26C6DA" />
+                                </linearGradient>
+                            </defs>
+                            <circle class="bg" cx="22" cy="22" r="18" />
+                            <circle class="progress" id="timerArc" cx="22" cy="22" r="18" stroke-dasharray="113.1"
+                                stroke-dashoffset="0" />
+                        </svg>
+                        <div class="game-timer-text" id="gameTimer">30</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canvas area -->
+            <div class="text-center">
+                <div class="game-canvas-wrap" style="max-width:620px; margin: 0 auto;">
+                    <canvas id="aeroCanvas" width="620" height="420"></canvas>
+
+                    <!-- Combo flash overlay (inside canvas) -->
+                    <div class="combo-flash" id="comboFlash"></div>
+
+                    <!-- Start overlay -->
+                    <div class="game-overlay" id="gameStartOverlay">
+                        <div class="game-overlay-emoji">🫧</div>
+                        <p class="game-overlay-title">Bubble Pop!</p>
+                        <p class="game-overlay-sub">Click glossy bubbles to pop them.<br>Don't let them escape — you
+                            only have 3 lives and 30 seconds!</p>
+                        <div class="game-hint">
+                            <span>🔵 Normal = +1</span>
+                            <span>🟡 Gold = +3</span>
+                            <span>💥 Combo = bonus!</span>
+                        </div>
+                        <button class="btn-game" id="btnStart">✨ Start Game</button>
+                    </div>
+
+                    <!-- Result overlay -->
+                    <div class="game-overlay hidden" id="gameResultOverlay">
+                        <div class="game-overlay-emoji" id="resultEmoji">🎉</div>
+                        <p class="game-overlay-title" id="resultTitle">Amazing!</p>
+                        <p class="game-overlay-sub">Your final score:</p>
+                        <div class="game-overlay-score" id="resultScore">0</div>
+                        <p class="game-overlay-sub" id="resultMsg"></p>
+                        <button class="btn-game" id="btnRestart">🔄 Play Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== CTA / NEWSLETTER ========== -->
     <section id="cta" class="section cta-section">
         <div class="container">
@@ -438,6 +729,67 @@
         </div>
     </section>
 
+    <!-- ========== LOCATION / MAP ========== -->
+    <section id="location" class="section location-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag"><i class="bi bi-geo-alt me-1"></i> Find Us</span>
+                <h2 class="section-title">Visit Our <span class="text-sky">Store</span></h2>
+                <div class="title-bar mx-auto"></div>
+                <p class="section-desc mt-3">Come experience the Frutiger Aero world in person. We'd love to see you!
+                </p>
+            </div>
+            <div class="row mt-5 g-4 align-items-stretch">
+                <div class="col-lg-7">
+                    <div class="map-wrap">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7356890987786!2d100.5232943!3d13.7299178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29ecfe0e2b903%3A0x7d5ab3e0ec04a7%3A0!2sSiam%20Paragon!5e0!3m2!1sen!2sth!4v1709000000000"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="AeroStore Location — Siam, Bangkok"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="location-card">
+                        <h4 style="font-weight:900; color:var(--text-dark); margin-bottom:28px;">🌿 AeroStore Bangkok
+                        </h4>
+                        <div class="location-info-row">
+                            <div class="location-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div class="location-info-text">
+                                <strong>Address</strong>
+                                <span>991 Siam Paragon, Level 1, Rama I Rd,<br>Pathumwan, Bangkok 10330</span>
+                            </div>
+                        </div>
+                        <div class="location-info-row">
+                            <div class="location-info-icon"><i class="bi bi-clock-fill"></i></div>
+                            <div class="location-info-text">
+                                <strong>Opening Hours</strong>
+                                <span>Mon – Fri: 10:00 – 21:00<br>Sat – Sun: 10:00 – 22:00</span>
+                            </div>
+                        </div>
+                        <div class="location-info-row">
+                            <div class="location-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                            <div class="location-info-text">
+                                <strong>Phone</strong>
+                                <span>+66 2 123 4567</span>
+                            </div>
+                        </div>
+                        <div class="location-info-row">
+                            <div class="location-info-icon"><i class="bi bi-envelope-fill"></i></div>
+                            <div class="location-info-text">
+                                <strong>Email</strong>
+                                <span>hello@aerostore.co</span>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com/?q=Siam+Paragon+Bangkok" target="_blank" rel="noopener"
+                            class="btn-directions">
+                            <i class="bi bi-map"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== FOOTER ========== -->
     <footer class="footer-section">
         <div class="container text-center">
@@ -449,6 +801,10 @@
                 <a href="#products">Products</a>
                 <a href="#features">Why Aero</a>
                 <a href="#reviews">Reviews</a>
+                <a href="#team">Team</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#minigame">Aero Zone</a>
+                <a href="#location">Find Us</a>
             </div>
             <div class="footer-socials mt-3">
                 <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
@@ -469,6 +825,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        /* =====================================================
+           GENERAL SITE SCRIPTS
+           ===================================================== */
+
         // Navbar scroll
         window.addEventListener('scroll', () => {
             document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
@@ -490,8 +850,10 @@
             });
         });
 
-        // Scroll reveal
-        const revealEls = document.querySelectorAll('.product-card, .feature-card, .review-card, .cta-box');
+        // Scroll reveal — original + new sections
+        const revealEls = document.querySelectorAll(
+            '.product-card, .feature-card, .review-card, .cta-box, .team-card, .location-card'
+        );
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, i) => {
                 if (entry.isIntersecting) {
@@ -501,6 +863,478 @@
             });
         }, { threshold: 0.1 });
         revealEls.forEach(el => observer.observe(el));
+
+        /* =====================================================
+           ⏳ PAGE LOADER
+           ===================================================== */
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 1400);
+        });
+
+        /* =====================================================
+           🖼️ GALLERY LIGHTBOX
+           ===================================================== */
+        (function () {
+            const lightbox = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lbImg');
+            const lbCaption = document.getElementById('lbCaption');
+            const lbClose = document.getElementById('lbClose');
+            const lbPrev = document.getElementById('lbPrev');
+            const lbNext = document.getElementById('lbNext');
+            const items = Array.from(document.querySelectorAll('.gallery-item'));
+            let current = 0;
+
+            function openLightbox(index) {
+                current = index;
+                const img = items[index].querySelector('img');
+                const cap = items[index].querySelector('.gallery-caption span');
+                lbImg.src = img.src;
+                lbImg.alt = img.alt;
+                lbCaption.textContent = cap ? cap.textContent : '';
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            function showNext() {
+                current = (current + 1) % items.length;
+                const img = items[current].querySelector('img');
+                const cap = items[current].querySelector('.gallery-caption span');
+                lbImg.src = img.src;
+                lbImg.alt = img.alt;
+                lbCaption.textContent = cap ? cap.textContent : '';
+            }
+
+            function showPrev() {
+                current = (current - 1 + items.length) % items.length;
+                const img = items[current].querySelector('img');
+                const cap = items[current].querySelector('.gallery-caption span');
+                lbImg.src = img.src;
+                lbImg.alt = img.alt;
+                lbCaption.textContent = cap ? cap.textContent : '';
+            }
+
+            items.forEach((item, i) => {
+                item.addEventListener('click', () => openLightbox(i));
+            });
+
+            lbClose.addEventListener('click', closeLightbox);
+            lbNext.addEventListener('click', showNext);
+            lbPrev.addEventListener('click', showPrev);
+
+            // Close on backdrop click
+            lightbox.addEventListener('click', e => {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', e => {
+                if (!lightbox.classList.contains('open')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') showNext();
+                if (e.key === 'ArrowLeft') showPrev();
+            });
+        })();
+
+        /* =====================================================
+           ✨ CURSOR TRAIL EFFECT
+           ===================================================== */
+        (function () {
+            const canvas = document.getElementById('trailCanvas');
+            const ctx = canvas.getContext('2d');
+            let W = canvas.width = window.innerWidth;
+            let H = canvas.height = window.innerHeight;
+            window.addEventListener('resize', () => {
+                W = canvas.width = window.innerWidth;
+                H = canvas.height = window.innerHeight;
+            });
+
+            const PALETTE = [
+                'rgba(79,195,247,',   // sky blue
+                'rgba(38,198,218,',   // aqua
+                'rgba(129,199,132,',  // leaf green
+                'rgba(255,255,255,',  // white
+                'rgba(178,235,242,',  // sky light
+                'rgba(255,213,79,',   // gold accent
+            ];
+
+            let particles = [];
+            let mouse = { x: -999, y: -999 };
+
+            window.addEventListener('mousemove', e => {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+                // spawn 3-5 particles per move
+                const count = 3 + Math.floor(Math.random() * 3);
+                for (let i = 0; i < count; i++) spawnParticle();
+            });
+
+            function spawnParticle() {
+                const col = PALETTE[Math.floor(Math.random() * PALETTE.length)];
+                const r = 3 + Math.random() * 7;
+                particles.push({
+                    x: mouse.x + (Math.random() - .5) * 16,
+                    y: mouse.y + (Math.random() - .5) * 16,
+                    r,
+                    col,
+                    alpha: .85 + Math.random() * .15,
+                    vx: (Math.random() - .5) * 1.5,
+                    vy: -(1 + Math.random() * 2.5),
+                    decay: .018 + Math.random() * .022,
+                    shimmer: Math.random() > .5, // glossy ring on some
+                });
+            }
+
+            function animTrail() {
+                ctx.clearRect(0, 0, W, H);
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vy *= .96;          // slow rise
+                    p.alpha -= p.decay;
+                    if (p.alpha <= 0) { particles.splice(i, 1); continue; }
+
+                    // glossy droplet
+                    const g = ctx.createRadialGradient(p.x - p.r * .3, p.y - p.r * .3, p.r * .1, p.x, p.y, p.r);
+                    g.addColorStop(0, 'rgba(255,255,255,' + (p.alpha * .9) + ')');
+                    g.addColorStop(.4, p.col + (p.alpha * .8) + ')');
+                    g.addColorStop(1, p.col + '0)');
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = g;
+                    ctx.fill();
+
+                    if (p.shimmer) {
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                        ctx.strokeStyle = p.col + (p.alpha * .4) + ')';
+                        ctx.lineWidth = .8;
+                        ctx.stroke();
+                    }
+                }
+                requestAnimationFrame(animTrail);
+            }
+            animTrail();
+        })();
+
+        /* =====================================================
+           🎮 BUBBLE POP MINIGAME
+           ===================================================== */
+        (function () {
+            const canvas = document.getElementById('aeroCanvas');
+            const ctx = canvas.getContext('2d');
+            const scoreEl = document.getElementById('gameScore');
+            const heartsEl = document.getElementById('gameHearts');
+            const comboEl = document.getElementById('gameCombo');
+            const timerEl = document.getElementById('gameTimer');
+            const timerArc = document.getElementById('timerArc');
+            const comboFlash = document.getElementById('comboFlash');
+            const startOverlay = document.getElementById('gameStartOverlay');
+            const resultOverlay = document.getElementById('gameResultOverlay');
+            const resultScore = document.getElementById('resultScore');
+            const resultEmoji = document.getElementById('resultEmoji');
+            const resultTitle = document.getElementById('resultTitle');
+            const resultMsg = document.getElementById('resultMsg');
+            document.getElementById('btnStart').addEventListener('click', startGame);
+            document.getElementById('btnRestart').addEventListener('click', startGame);
+
+            const W = canvas.width;
+            const H = canvas.height;
+            const TOTAL_TIME = 30; // seconds
+            const ARC_LEN = 2 * Math.PI * 18; // circumference of timer circle (r=18)
+
+            // Frutiger Aero bubble palette
+            const COLORS = [
+                { fill: ['rgba(79,195,247,.75)', 'rgba(178,235,242,.20)'], rim: 'rgba(79,195,247,.9)', pts: 1 },
+                { fill: ['rgba(38,198,218,.75)', 'rgba(178,235,242,.20)'], rim: 'rgba(38,198,218,.9)', pts: 1 },
+                { fill: ['rgba(129,199,132,.80)', 'rgba(200,230,201,.20)'], rim: 'rgba(129,199,132,.9)', pts: 1 },
+                { fill: ['rgba(171,71,188,.70)', 'rgba(225,190,231,.20)'], rim: 'rgba(171,71,188,.8)', pts: 2 }, // rare purple
+                { fill: ['rgba(255,213,79,.85)', 'rgba(255,249,196,.20)'], rim: 'rgba(255,213,79,1)', pts: 3, gold: true }, // gold = 3pts
+            ];
+
+            let bubbles = [];
+            let particles = [];
+            let score = 0;
+            let lives = 3;
+            let combo = 0;
+            let timeLeft = TOTAL_TIME;
+            let running = false;
+            let spawnTimer = 0;
+            let spawnInterval = 80; // frames
+            let raf;
+            let intervalId;
+
+            // Resize canvas for mobile
+            function resizeCanvas() {
+                const wrap = canvas.parentElement;
+                const maxW = Math.min(620, wrap.clientWidth);
+                if (maxW < 620) {
+                    canvas.width = maxW;
+                    canvas.height = Math.round(maxW * (420 / 620));
+                } else {
+                    canvas.width = 620;
+                    canvas.height = 420;
+                }
+            }
+            window.addEventListener('resize', () => { if (!running) resizeCanvas(); });
+            resizeCanvas();
+
+            function startGame() {
+                bubbles = [];
+                particles = [];
+                score = 0;
+                lives = 3;
+                combo = 0;
+                timeLeft = TOTAL_TIME;
+                spawnTimer = 0;
+                spawnInterval = 80;
+                running = true;
+                updateUI();
+                startOverlay.classList.add('hidden');
+                resultOverlay.classList.add('hidden');
+                clearInterval(intervalId);
+                intervalId = setInterval(tickTimer, 1000);
+                cancelAnimationFrame(raf);
+                gameLoop();
+            }
+
+            function tickTimer() {
+                if (!running) return;
+                timeLeft--;
+                timerEl.textContent = timeLeft;
+                // Update SVG arc
+                const offset = ARC_LEN * (1 - timeLeft / TOTAL_TIME);
+                timerArc.style.strokeDashoffset = offset;
+                if (timeLeft <= 0) endGame();
+            }
+
+            function endGame() {
+                running = false;
+                clearInterval(intervalId);
+                cancelAnimationFrame(raf);
+                // Result screen
+                resultScore.textContent = score;
+                let emoji, title, msg;
+                if (score >= 40) { emoji = '🏆'; title = 'Legendary!'; msg = 'You\'re an Aero master!'; }
+                else if (score >= 25) { emoji = '🌟'; title = 'Amazing!'; msg = 'Incredible bubble skills!'; }
+                else if (score >= 15) { emoji = '💧'; title = 'Nice!'; msg = 'Keep floating and popping!'; }
+                else { emoji = '🫧'; title = 'Good Try!'; msg = 'Practice makes perfect!'; }
+                resultEmoji.textContent = emoji;
+                resultTitle.textContent = title;
+                resultMsg.textContent = msg;
+                resultOverlay.classList.remove('hidden');
+            }
+
+            function updateUI() {
+                scoreEl.textContent = score;
+                heartsEl.textContent = ['❤️', '❤️', '❤️'].slice(0, lives).join('') + ['🖤', '🖤', '🖤'].slice(0, 3 - lives).join('');
+                comboEl.textContent = 'x' + Math.max(1, combo);
+            }
+
+            function spawnBubble() {
+                const CW = canvas.width;
+                const CH = canvas.height;
+                const isGold = Math.random() < .08; // 8% gold chance
+                const color = isGold ? COLORS[4] : COLORS[Math.floor(Math.random() * 4)];
+                const r = 20 + Math.random() * 28;
+                bubbles.push({
+                    x: r + Math.random() * (CW - r * 2),
+                    y: CH + r,
+                    r,
+                    vy: -(0.6 + Math.random() * 1.0),
+                    vx: (Math.random() - .5) * 0.6,
+                    color,
+                    wobble: Math.random() * Math.PI * 2,
+                    wobbleSpeed: .02 + Math.random() * .02,
+                    alpha: 0,
+                    born: 0,
+                });
+            }
+
+            function drawBubble(b) {
+                const ctx2 = ctx;
+                ctx2.save();
+                ctx2.globalAlpha = Math.min(1, b.alpha);
+
+                // Main sphere gradient
+                const g = ctx2.createRadialGradient(
+                    b.x - b.r * .3, b.y - b.r * .3, b.r * .05,
+                    b.x, b.y, b.r
+                );
+                g.addColorStop(0, 'rgba(255,255,255,.88)');
+                g.addColorStop(.35, b.color.fill[0]);
+                g.addColorStop(1, b.color.fill[1]);
+
+                ctx2.beginPath();
+                ctx2.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+                ctx2.fillStyle = g;
+                ctx2.fill();
+
+                // Rim glow
+                ctx2.beginPath();
+                ctx2.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+                ctx2.strokeStyle = b.color.rim;
+                ctx2.lineWidth = 1.5;
+                ctx2.stroke();
+
+                // Glossy highlight
+                const hi = ctx2.createRadialGradient(
+                    b.x - b.r * .28, b.y - b.r * .35, 0,
+                    b.x - b.r * .1, b.y - b.r * .2, b.r * .55
+                );
+                hi.addColorStop(0, 'rgba(255,255,255,.85)');
+                hi.addColorStop(1, 'rgba(255,255,255,0)');
+                ctx2.beginPath();
+                ctx2.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+                ctx2.fillStyle = hi;
+                ctx2.fill();
+
+                // Gold star on gold bubbles
+                if (b.color.gold) {
+                    ctx2.font = `${b.r * .7}px Nunito`;
+                    ctx2.textAlign = 'center';
+                    ctx2.textBaseline = 'middle';
+                    ctx2.fillStyle = 'rgba(255,200,0,.9)';
+                    ctx2.fillText('⭐', b.x, b.y + 2);
+                }
+
+                ctx2.restore();
+            }
+
+            function popBurst(x, y, color) {
+                const count = 12 + Math.floor(Math.random() * 8);
+                for (let i = 0; i < count; i++) {
+                    const angle = (Math.PI * 2 / count) * i + Math.random() * .4;
+                    const speed = 2 + Math.random() * 4;
+                    particles.push({
+                        x, y,
+                        vx: Math.cos(angle) * speed,
+                        vy: Math.sin(angle) * speed,
+                        r: 2 + Math.random() * 5,
+                        alpha: 1,
+                        decay: .035 + Math.random() * .04,
+                        col: color,
+                    });
+                }
+            }
+
+            function showCombo(val) {
+                let label = '';
+                if (val >= 10) label = '🔥 MEGA x' + val + '!';
+                else if (val >= 5) label = '💥 SUPER x' + val + '!';
+                else if (val >= 3) label = '⚡ COMBO x' + val + '!';
+                if (!label) return;
+                comboFlash.textContent = label;
+                comboFlash.classList.remove('show');
+                void comboFlash.offsetWidth;
+                comboFlash.classList.add('show');
+            }
+
+            // Click / tap to pop
+            canvas.addEventListener('click', e => {
+                if (!running) return;
+                const rect = canvas.getBoundingClientRect();
+                const scaleX = canvas.width / rect.width;
+                const scaleY = canvas.height / rect.height;
+                const mx = (e.clientX - rect.left) * scaleX;
+                const my = (e.clientY - rect.top) * scaleY;
+
+                for (let i = bubbles.length - 1; i >= 0; i--) {
+                    const b = bubbles[i];
+                    const dx = mx - b.x, dy = my - b.y;
+                    if (dx * dx + dy * dy < b.r * b.r) {
+                        popBurst(b.x, b.y, b.color.rim);
+                        bubbles.splice(i, 1);
+                        combo++;
+                        const pts = b.color.pts * Math.max(1, Math.floor(combo / 3));
+                        score += pts;
+                        showCombo(combo);
+                        updateUI();
+                        break;
+                    }
+                }
+            });
+
+            function gameLoop() {
+                if (!running) return;
+                const CW = canvas.width;
+                const CH = canvas.height;
+
+                // Clear
+                ctx.clearRect(0, 0, CW, CH);
+
+                // Draw background gradient
+                const bg = ctx.createLinearGradient(0, 0, CW, CH);
+                bg.addColorStop(0, 'rgba(224,247,250,.9)');
+                bg.addColorStop(.5, 'rgba(178,235,242,.7)');
+                bg.addColorStop(1, 'rgba(200,230,201,.75)');
+                ctx.fillStyle = bg;
+                ctx.fillRect(0, 0, CW, CH);
+
+                // Spawn bubbles
+                spawnTimer++;
+                if (spawnTimer >= spawnInterval) {
+                    spawnTimer = 0;
+                    spawnBubble();
+                    // Speed up over time
+                    spawnInterval = Math.max(30, 80 - (TOTAL_TIME - timeLeft) * 1.6);
+                }
+
+                // Update & draw bubbles
+                for (let i = bubbles.length - 1; i >= 0; i--) {
+                    const b = bubbles[i];
+                    b.born++;
+                    b.alpha = Math.min(1, b.born / 20);
+                    b.wobble += b.wobbleSpeed;
+                    b.x += b.vx + Math.sin(b.wobble) * .5;
+                    b.y += b.vy;
+                    drawBubble(b);
+
+                    // Escaped at top
+                    if (b.y + b.r < 0) {
+                        bubbles.splice(i, 1);
+                        combo = 0;
+                        lives--;
+                        updateUI();
+                        if (lives <= 0) { endGame(); return; }
+                    }
+                }
+
+                // Burst particles
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vx *= .92;
+                    p.vy *= .92;
+                    p.alpha -= p.decay;
+                    if (p.alpha <= 0) { particles.splice(i, 1); continue; }
+                    ctx.save();
+                    ctx.globalAlpha = p.alpha;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = p.col;
+                    ctx.shadowColor = p.col;
+                    ctx.shadowBlur = 8;
+                    ctx.fill();
+                    ctx.restore();
+                }
+
+                raf = requestAnimationFrame(gameLoop);
+            }
+
+            // Init arc
+            timerArc.style.strokeDasharray = ARC_LEN;
+            timerArc.style.strokeDashoffset = 0;
+        })();
     </script>
 </body>
 
